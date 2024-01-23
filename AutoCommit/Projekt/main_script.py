@@ -15,9 +15,8 @@ if __name__ == "__main__":
     time.sleep(5)
     ask_chat_gpt(idee)
     clickOnCopy()
-    ClipboardExtractor.extract_code_from_clipboard()
-    ClipboardExtractor.save_code_to_file(idee)
-    Push.create_and_push_commit_file(idee,"Test")
+    ClipboardExtractor.extract_code_from_clipboard("Test.py")
+    #Push.create_and_push_commit_file("Test.py","Test")
 
 
 # open ai in python 

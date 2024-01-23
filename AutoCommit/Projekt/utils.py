@@ -45,10 +45,6 @@ def ask_chat_gpt(ideas):
     # Verwende die erste Idee, wenn vorhanden
     if ideas:
         pyautogui.typewrite("write a code in python for " + ideas)
-        time.sleep(2)
-        press_key("enter")
-        time.sleep(2)
-        press_key("delete")
     else:
         print("No ideas available.")
         

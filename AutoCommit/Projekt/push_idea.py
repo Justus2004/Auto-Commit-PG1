@@ -2,8 +2,7 @@
 import os
 import subprocess
 class Push:
-    def create_and_push_commit_file(temp, commit_message):
-        commit_file_path = temp+".py"
+    def create_and_push_commit_file(commit_file_path, commit_message):
         try:
             # Erstelle eine neue Datei commit.py
             with open(commit_file_path, 'w') as commit_file:
