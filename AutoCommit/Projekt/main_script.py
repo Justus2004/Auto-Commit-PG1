@@ -15,6 +15,7 @@ if __name__ == "__main__":
     time.sleep(5)
     ask_chat_gpt(idee)
     clickOnCopy()
+    # Automatische Datenname funktioniert nicht
     ClipboardExtractor.extract_code_from_clipboard("Test.py")
     #Push.create_and_push_commit_file("Test.py","Test")
 
