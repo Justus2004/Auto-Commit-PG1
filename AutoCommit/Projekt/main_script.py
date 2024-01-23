@@ -6,17 +6,12 @@ from idea_manager import IdeaManager
 from clipboard_extractor import ClipboardExtractor
 
 if __name__ == "__main__":
-    # Benutzerdefinierter Dateipfad für IdeaManager
-    custom_file_path = os.path.abspath("ideas.txt")
     
     url = 'https://chat.openai.com/auth/login'
     open_browser(url)
 
-    # Erstelle eine Instanz von IdeaManager mit benutzerdefiniertem Dateipfad
-    im = IdeaManager(file_path=custom_file_path)
-
     perform_login()
-    ask_chat_gpt(im)
+    ask_chat_gpt(IdeaManager.bearbeite_datei())
     clickOnCopy()
     ClipboardExtractor.extract_code_from_clipboard()
 
