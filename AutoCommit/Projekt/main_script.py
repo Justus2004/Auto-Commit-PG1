@@ -6,7 +6,7 @@ from clipboard_extractor import ClipboardExtractor
 
 if __name__ == "__main__":
     # Benutzerdefinierter Dateipfad für IdeaManager
-    custom_file_path = r"C:\Users\jpl\repository_AutoCommit\Auto-Commit-PG1\AutoCommit\(1) autoCommitGit\ideas.txt"
+    custom_file_path = r"C:\Users\jpl\VS Code for Git\codespaces-jupyter\(1) autoCommitGit\ideas.txt"
     
     url = 'https://chat.openai.com/auth/login'
     open_browser(url)

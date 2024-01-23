@@ -45,5 +45,3 @@ class ClipboardExtractor:
 
 if __name__ == "__main__":
     ClipboardExtractor.extract_code_from_clipboard()
-    
-# nächster Step, .py datei commit und push, dannach datei reinigen 
