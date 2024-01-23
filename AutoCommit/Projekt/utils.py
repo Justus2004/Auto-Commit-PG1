@@ -47,6 +47,8 @@ def ask_chat_gpt(ideas):
         pyautogui.typewrite("write a code in python for " + ideas)
         time.sleep(2)
         press_key("enter")
+        time.sleep(2)
+        press_key("delete")
     else:
         print("No ideas available.")
         
@@ -54,3 +56,4 @@ def ask_chat_gpt(ideas):
 def clickOnCopy():
     time.sleep(20)
     click_at_position(720, 843)
+    time.sleep(2)

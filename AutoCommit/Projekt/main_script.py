@@ -11,7 +11,7 @@ if __name__ == "__main__":
     url = 'https://chat.openai.com/auth/login'
     open_browser(url)
 
-    perform_login()
+    # perform_login()
     time.sleep(5)
     ask_chat_gpt(idee)
     clickOnCopy()
