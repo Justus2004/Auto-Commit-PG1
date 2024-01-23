@@ -32,17 +32,17 @@ class ClipboardExtractor:
         ClipboardExtractor.save_code_to_file(extracted_code)
 
     @staticmethod
-    def save_code_to_file(code_blocks, DateiName):
+    def save_code_to_file(code_blocks,file_name):
         # Erstellen Sie eine neue Datei mit einem eindeutigen Namen
-        file_name = Ideas 
 
-        with open(file_name, "w") as file:
+        with open(file_name+".py", "w") as file:
             # Schreiben Sie den extrahierten Code in die Datei
             for code_block in code_blocks:
                 file.write(code_block)
                 file.write("\n\n")
 
         print(f"Extrahierter Code wurde in der Datei '{file_name}' gespeichert.")
+        return file
 
 if __name__ == "__main__":
     ClipboardExtractor.extract_code_from_clipboard()
