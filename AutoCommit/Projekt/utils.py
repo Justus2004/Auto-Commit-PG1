@@ -39,15 +39,12 @@ def perform_login():
     press_key("enter")
     time.sleep(5)
 
-def ask_chat_gpt(idea_manager):
+def ask_chat_gpt(ideas):
     click_at_position(685, 950, duration=1)
-    
-    # Lade die Ideen
-    ideas = idea_manager.load_ideas()
 
     # Verwende die erste Idee, wenn vorhanden
     if ideas:
-        pyautogui.typewrite(f"write a code for {ideas[0]} in python")
+        pyautogui.typewrite(f"write a code for"+ideas+"in python")
         press_key("enter")
     else:
         print("No ideas available.")
