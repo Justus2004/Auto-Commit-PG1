@@ -22,7 +22,7 @@ def create_and_push_commit_file(repository_path, commit_file_path, commit_messag
         print(f"Fehler beim Pushen: {e}")
 
 # Beispielaufruf
-repo_path = r"C:\Users\jpl\repository_AutoCommit\Auto-Commit-PG1"
+repo_path = "AutoCommit\Projekt"
 commit_file_path = "commit.py"  # Stellen Sie sicher, dass der Pfad korrekt ist
 commit_message = "Neue Datei commit.py erstellt"
 

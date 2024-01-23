@@ -1,6 +1,7 @@
 # clipboard_extractor.py
 import re
 import pyperclip
+from idea_manager import IdeaManager
 
 class ClipboardExtractor:
     @staticmethod
@@ -31,9 +32,9 @@ class ClipboardExtractor:
         ClipboardExtractor.save_code_to_file(extracted_code)
 
     @staticmethod
-    def save_code_to_file(code_blocks):
+    def save_code_to_file(code_blocks, DateiName):
         # Erstellen Sie eine neue Datei mit einem eindeutigen Namen
-        file_name = "extracted_code.py"
+        file_name = Ideas 
 
         with open(file_name, "w") as file:
             # Schreiben Sie den extrahierten Code in die Datei
