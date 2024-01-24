@@ -2,7 +2,6 @@
 import re
 import pyperclip
 
-
 def extract_code(text):
     # Definieren Sie einen regulären Ausdruck, um Code zu erkennen (z.B. beginnt mit "```" und endet mit "```")
     code_pattern = r'```([\s\S]*?)```'
