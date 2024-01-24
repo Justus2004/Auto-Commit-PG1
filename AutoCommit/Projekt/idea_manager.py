@@ -2,7 +2,7 @@
 import os
 
 
-def bearbeite_datei():
+def idee_ziehen():
     dateipfad = 'AutoCommit\Projekt\ideas.txt'
     with open(dateipfad, 'r') as datei:
         zeilen = datei.readlines()

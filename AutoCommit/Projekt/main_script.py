@@ -7,7 +7,7 @@ from clipboard_extractor import *
 from push_idea import *
 
 if __name__ == "__main__":
-    idee = bearbeite_datei()
+    idee = idee_ziehen()
     url = 'https://chat.openai.com/auth/login'
     open_browser(url)
 
