@@ -2,12 +2,12 @@ import os
 import time
 
 from utils import open_browser, perform_login, ask_chat_gpt, clickOnCopy
-from idea_manager import IdeaManager
+from idea_manager import bearbeite_datei
 from clipboard_extractor import ClipboardExtractor
 from push_idea import Push
 
 if __name__ == "__main__":
-    idee = IdeaManager.bearbeite_datei()
+    idee = bearbeite_datei()
     url = 'https://chat.openai.com/auth/login'
     open_browser(url)
 

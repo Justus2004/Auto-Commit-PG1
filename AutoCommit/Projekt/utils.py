@@ -3,9 +3,6 @@ import pyautogui
 import webbrowser
 import time
 
-# pyautogui
-from idea_manager import IdeaManager
-
 def open_browser(url):
     webbrowser.open(url)
 
@@ -48,6 +45,8 @@ def ask_chat_gpt(ideas):
     else:
         print("No ideas available.")
         
+def copy_discussion():
+    click_at_position()
     
 def clickOnCopy():
     time.sleep(20)
