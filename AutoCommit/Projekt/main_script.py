@@ -3,7 +3,7 @@ import time
 
 from utils import open_browser, perform_login, ask_chat_gpt, clickOnCopy
 from idea_manager import bearbeite_datei
-from clipboard_extractor import ClipboardExtractor
+from clipboard_extractor import extract_code_from_clipboard
 from push_idea import Push
 
 if __name__ == "__main__":
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     ask_chat_gpt(idee)
     clickOnCopy()
     # Automatische Datenname funktioniert nicht
-    ClipboardExtractor.extract_code_from_clipboard("Test.py")
+    extract_code_from_clipboard("Test.py")
     #Push.create_and_push_commit_file("Test.py","Test")
 
 
