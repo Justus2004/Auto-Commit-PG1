@@ -29,4 +29,5 @@ if __name__ == "__main__":
 # 1. Clicks in Prozent (mit Anzahl der Pixel, pyautogui hat ein Befehl für das anzeigen der Anzahl)
 # 2. Chat, nach Benutzung löschen
 # 3. Nach Copied wechsel zu VSC
-# 4. Diskussion über Selenium, xPath 
+# 4. Diskussion über Selenium, xPath
+# 5. Programm soll nach 7 Tagen gelöscht werden 
