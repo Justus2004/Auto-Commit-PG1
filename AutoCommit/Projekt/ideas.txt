@@ -1,7 +1,8 @@
-Build a simple weather app using an API
-Write a script to organize files in a directory
-Implement a basic rock-paper-scissors gamesCreate a simple to-do list application
+Create a simple to-do list application
 Build a basic calculator with GUI
 Write a program to check if a number is prime
 Implement a basic chatbot with predefined responses
 Create a program to generate random passwords
+Build a simple weather app using an API
+Write a script to organize files in a directory
+Implement a basic rock-paper-scissors games

@@ -1,4 +1,3 @@
-# idea_manager.py
 import os
 
 
@@ -16,4 +15,4 @@ def idee_ziehen():
     with open(dateipfad, 'w') as datei:
         datei.writelines(zeilen)
     
-    return erste_zeile
+    return erste_zeile# idea_manager.py

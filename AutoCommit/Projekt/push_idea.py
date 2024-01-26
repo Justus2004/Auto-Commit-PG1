@@ -3,23 +3,22 @@ import subprocess
 
 def create_and_push_commit_file(commit_file_path, commit_message):
     try:
-        # Erstelle eine neue Datei commit.py
-        with open(commit_file_path, 'w') as commit_file:
-            commit_file.write("# Hier kommt der Inhalt Ihrer commit.py-Datei")
+        # Verify if the file exists
+        if not os.path.isfile(commit_file_path):
+            print(f"Error: File '{commit_file_path}' not found.")
+            return
 
-        # Füge die Datei zum Index hinzu
-        subprocess.run(["git", "add", commit_file_path], cwd="AutoCommit\Projekt", check=True)
+        # Add the file to the Git index
+        subprocess.run(["git", "add", commit_file_path], check=True)
 
-        # Commit mit der angegebenen Nachricht
-        subprocess.run(["git", "commit", "-m", commit_message], cwd="AutoCommit\Projekt", check=True)
+        # Commit with the specified message
+        subprocess.run(["git", "commit", "-m", commit_message], check=True)
 
-        # Pushe die Änderungen zum Remote-Repository
-        subprocess.run(["git", "push"], cwd="AutoCommit\Projekt", check=True)
+        # Push the changes to the remote repository
+        subprocess.run(["git", "push"], check=True)
 
-        print("Erfolgreich gepusht!")
+        print("Successfully pushed!")
     except subprocess.CalledProcessError as e:
-        print(f"Fehler beim Pushen: {e}")
-
-
+        print(f"Error while pushing: {e}")
 
 
