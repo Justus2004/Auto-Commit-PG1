@@ -24,3 +24,9 @@ if __name__ == "__main__":
     extract_code_from_clipboard(name)
     time.sleep(2)
     create_and_push_commit_file(name,"new Programm")
+
+
+# 1. Clicks in Prozent (mit Anzahl der Pixel, pyautogui hat ein Befehl für das anzeigen der Anzahl)
+# 2. Chat, nach Benutzung löschen
+# 3. Nach Copied wechsel zu VSC
+# 4. Diskussion über Selenium, xPath 
