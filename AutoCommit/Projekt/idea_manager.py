@@ -1,6 +1,3 @@
-import os
-
-
 def idee_ziehen():
     dateipfad = 'AutoCommit\Projekt\ideas.txt'
     with open(dateipfad, 'r') as datei:
