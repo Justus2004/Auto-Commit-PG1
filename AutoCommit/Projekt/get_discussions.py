@@ -27,7 +27,7 @@ def main():
     week_activity_loc = pyautogui.locateCenterOnScreen(r'sort by week')
     pyautogui.click(week_activity_loc)
     if pyautogui.locateCenterOnScreen(r' ')==False:
-        break
+        
     else:
         discussion_loc = pyautogui.locateCenterOnScreen(r'Last Week')
         pyautogui.click(discussion_loc)
