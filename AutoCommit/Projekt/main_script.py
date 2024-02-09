@@ -26,9 +26,6 @@ if __name__ == "__main__":
     time.sleep(2)
     create_and_push_commit_file(name,"new Programm")
     open_browser(GitHub_url)
-    #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
-    
-
 
 # 1. Clicks in Prozent (mit Anzahl der Pixel, pyautogui hat ein Befehl für das anzeigen der Anzahl)
 # 2. Chat, nach Benutzung löschen
