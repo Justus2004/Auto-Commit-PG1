@@ -1,6 +1,7 @@
 import random
 from utils import *
 import pyautogui
+from clipboard_extractor import *
 def pull_disscusion_link():
     dateiName = 'Auto-Commit-PG1\AutoCommit\Projekt\Git-Hub-Acc.txt'
 
@@ -44,6 +45,9 @@ def main():
     message_loc = pyautogui.locateCenterOnScreen(r'Message chat')
     pyautogui.click(message_loc)
     pyautogui.hotkey(["ctrl","v"])
+    clickOnCopy()
+    #auf github einfügen und abschicken 
+    
     
     
     
