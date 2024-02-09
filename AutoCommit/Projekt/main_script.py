@@ -31,6 +31,7 @@ if __name__ == "__main__":
     open_browser(GitHub_url)
     
     # discord
+    ## switch to discord/or oben a window
     findName()
     getDots()
     getBell()
