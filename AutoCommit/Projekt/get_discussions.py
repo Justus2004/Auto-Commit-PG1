@@ -21,29 +21,28 @@ def pull_disscusion_link():
 def main():
     link = pull_disscusion_link()
     chat_link = 'https://chat.openai.com/auth/login'
+    
     open_browser(link)
-    activity_loc = pyautogui.locateCenterOnScreen(r'sort by activiy')
+    activity_loc = pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Latest_Activity_Button.png')
     pyautogui.click(activity_loc)
-    week_activity_loc = pyautogui.locateCenterOnScreen(r'sort by week')
+    week_activity_loc = pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Past_Week_Button.png')
     pyautogui.click(week_activity_loc)
-    if pyautogui.locateCenterOnScreen(r' ')==False:
-        
-    else:
-        discussion_loc = pyautogui.locateCenterOnScreen(r'Last Week')
-        pyautogui.click(discussion_loc)
+    #auf die discussion clicken
+    pyautogui.click(x=854, y=771)
     
     click_at_position(x=119, y=574)
     
-    if pyautogui.locateCenterOnScreen(r'top bild')==False:
+    while pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Top_Button.png')==False:
         pyautogui.scroll('?')
-    else:
-        top_loc = pyautogui.locateCenterOnScreen(r'top bild')
-        pyautogui.moveTo(top_loc)
+        
+    top_loc = pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Top_Button.png')
+    pyautogui.moveTo(top_loc)
     
     pyautogui.hotkey(["ctrl","c"])
     open_browser(chat_link)
-    message_loc = pyautogui.locateCenterOnScreen(r'Message chat')
-    pyautogui.click(message_loc)
+    
+    #message_loc = pyautogui.locateCenterOnScreen(r'Message chat')
+    #pyautogui.click(message_loc)
     pyautogui.hotkey(["ctrl","v"])
     clickOnCopy()
     #auf github einfügen und abschicken 
