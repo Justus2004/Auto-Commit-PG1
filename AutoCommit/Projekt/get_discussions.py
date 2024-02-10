@@ -1,7 +1,7 @@
 import random
 from utils import *
 import pyautogui
-from clipboard_extractor import *
+import time
 def pull_disscusion_link():
     dateiName = 'Auto-Commit-PG1\AutoCommit\Projekt\Git-Hub-Acc.txt'
 
@@ -18,34 +18,60 @@ def pull_disscusion_link():
 
     return zufalls_zeile
 
-def main():
-    link = pull_disscusion_link()
-    chat_link = 'https://chat.openai.com/auth/login'
-    
+def find_discussion(link):
     open_browser(link)
-    activity_loc = pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Latest_Activity_Button.png')
-    pyautogui.click(activity_loc)
-    week_activity_loc = pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Past_Week_Button.png')
-    pyautogui.click(week_activity_loc)
+    time.sleep(3)
+    activity_loc = pyautogui.locateCenterOnScreen('Projekt/buttons/discussion_push_button/Latest_Activity_Button.png')
+    pyautogui.moveTo(activity_loc)
+    pyautogui.click()
+    
+    week_activity_loc = pyautogui.locateCenterOnScreen('Projekt\buttons\discussion_push_button\Past_Week_Button.png')
+    pyautogui.moveTo(week_activity_loc)
+    pyautogui.click()
+    
     #auf die discussion clicken
     pyautogui.click(x=854, y=771)
     
-    click_at_position(x=119, y=574)
     
-    while pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Top_Button.png')==False:
-        pyautogui.scroll('?')
+def copy_discussions():
+    #zum kopierpunkt gehen
+    pyautogui.moveTo(x=119, y=574)
+    pyautogui.mouseDown()
+    
+    while pyautogui.locateCenterOnScreen('Projekt\buttons\discussion_push_button\Top_Button.png')==None:
+        pyautogui.scroll(700)
         
-    top_loc = pyautogui.locateCenterOnScreen(r'Projekt\buttons\discussion_push_button\Top_Button.png')
+    top_loc = pyautogui.locateCenterOnScreen('Projekt\buttons\discussion_push_button\Top_Button.png')
     pyautogui.moveTo(top_loc)
-    
+    pyautogui.mouseUp()
+     
+def main():
+    #links
+    link = pull_disscusion_link()
+    chat_link = 'https://chat.openai.com/auth/login'
+    #Git-Hub öffnen
+    find_discussion(link)
+    copy_discussions()
+    #kopieren und in chatgpt einfügen
     pyautogui.hotkey(["ctrl","c"])
     open_browser(chat_link)
-    
-    #message_loc = pyautogui.locateCenterOnScreen(r'Message chat')
-    #pyautogui.click(message_loc)
     pyautogui.hotkey(["ctrl","v"])
     clickOnCopy()
-    #auf github einfügen und abschicken 
+    find_discussion(link)
+    while pyautogui.locateCenterOnScreen('Auto-Commit-PG1\AutoCommit\Projekt\buttons\discussion_push_button\Paste_Commend_Button.png') == None:
+        pyautogui.scroll(700)
+    
+    paste_comment = pyautogui.locateCenterOnScreen('Auto-Commit-PG1\AutoCommit\Projekt\buttons\discussion_push_button\Paste_Commend_Button.png')
+    pyautogui.click(paste_comment)
+    
+    send_comment = pyautogui.locateCenterOnScreen('Auto-Commit-PG1\AutoCommit\Projekt\buttons\discussion_push_button\Send_Comment_Button.png')
+    pyautogui.click(send_comment)
+    
+    
+    
+    #auf github einfügen und abschicken
+
+main()
     
     
     
