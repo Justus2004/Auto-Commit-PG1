@@ -6,6 +6,7 @@ from idea_manager import *
 from clipboard_extractor import *
 from push_idea import *
 from clickBell import *
+from get_discussions import *
 
 if __name__ == "__main__":
     # idee
@@ -35,6 +36,8 @@ if __name__ == "__main__":
     findName()
     getDots()
     getBell()
+    get_discussion_main()
+    
 
 # 1. Clicks in Prozent (mit Anzahl der Pixel, pyautogui hat ein Befehl für das anzeigen der Anzahl)
 # 2. Chat, nach Benutzung löschen

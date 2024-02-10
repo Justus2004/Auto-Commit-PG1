@@ -45,7 +45,7 @@ def copy_discussions():
     pyautogui.moveTo(top_loc)
     pyautogui.mouseUp()
      
-def main():
+def get_discussion_main():
     #links
     link = pull_disscusion_link()
     chat_link = 'https://chat.openai.com/auth/login'
@@ -71,7 +71,7 @@ def main():
     
     #auf github einfügen und abschicken
 
-main()
+get_discussion_main()
     
     
     
