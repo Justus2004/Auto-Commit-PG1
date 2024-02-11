@@ -272,3 +272,4 @@ def git_main():
     return name  # Den extrahierten Namen zurückgeben
 
 
+git_main()
