@@ -1,0 +1,11 @@
+def editDiscussion(file_path):
+
+    # Text aus der Zwischenablage kopieren
+
+    clipboard_text = pyperclip.paste()
+
+
+
+    # Find the index of the last sentence separator
+
+    last_sentence_index = clipboard_text.rfind('

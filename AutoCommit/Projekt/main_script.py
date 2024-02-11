@@ -6,37 +6,30 @@ from idea_manager import *
 from clipboard_extractor import *
 from push_idea import *
 from clickBell import *
-from get_discussions import *
+from commentOnGit import *
+from askChat import *
 
 if __name__ == "__main__":
-    # idee
     idee = idee_ziehen()[:-2]
     name = idee + ".py"
-
     print(idee)
-    
-    # browser 
+
     chatgpt_url = 'https://chat.openai.com/auth/login'
-    GitHub_url ='https://github.com/Justus2004/codespaces-jupyter/discussions'
+    GitHub_url = 'https://github.com/Justus2004/codespaces-jupyter/discussions'
     open_browser(chatgpt_url)
 
-    # perform_login()
     time.sleep(5)
     ask_chat_gpt(idee)
     clickOnCopy()
-    
-    # extract and push
+
     extract_code_from_clipboard(name)
     time.sleep(2)
-    create_and_push_commit_file(name,"new Programm")
+    create_and_push_commit_file(name, "new Programm")
     open_browser(GitHub_url)
-    
-    # discord
-    ## switch to discord/or oben a window
-    findName()
-    getDots()
-    getBell()
-    get_discussion_main()
+
+    name = git_main()  # Name von git_main erhalten
+    discord_Main(name)  # Name an discord_Main übergeben
+
     
 
 # 1. Clicks in Prozent (mit Anzahl der Pixel, pyautogui hat ein Befehl für das anzeigen der Anzahl)
