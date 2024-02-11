@@ -21,20 +21,29 @@ def open_discord():
         
 def goToProgramingClass():
     programming = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\programming.png')  
-    if programming:
+    if programming is not None:
         pyautogui.click(programming)
-        pyautogui.moveTo(1455, 640)
         print("channel found")
     else:
         print("channel not found")
 
 def findName(name):
+    pyautogui.moveTo(1455, 640)
+    time.sleep(1)
     name_lowercase = name.lower()  # Um sicherzustellen, dass der Name in Kleinbuchstaben ist
     while True:
         mate = pyautogui.locateCenterOnScreen(f'AutoCommit\\Projekt\\names\\{name_lowercase}.png')
         
         if mate is not None:
             pyautogui.moveTo(mate)
+            x, y = mate
+            pyautogui.moveTo(x+955, y, duration = 1)
+            pyautogui.moveTo(x+955, y-26, duration=1)
+            pyautogui.click()
+            # time.sleep(2)
+            # pyautogui.moveTo(x+670, y)
+            # pyautogui.click()
+            # time.sleep(2)
             print("Name found!")
             break  
         else:
@@ -43,17 +52,32 @@ def findName(name):
  
 
 def getDots():
-    dots = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\dotsDiscord.png')
-        
+    dots = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\dots_Discord.png')
+    x, y = dots    
     pyautogui.moveTo(dots)
     pyautogui.click()
+    time.sleep(2)
+    pyautogui.click(x-270 ,y+5)
 
 
-def getBell():
-    bell = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\bellDiscord.png')
-    
-    pyautogui.moveTo(bell)
-    pyautogui.click()
+def getBell(name):
+    while True: 
+        field = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\field_discord.png')
+        time.sleep(2)
+        
+        if field is not None:
+            pyautogui.moveTo(field)
+            
+            x,y = field
+            pyautogui.moveTo(x-105, y, duration=1)  
+            pyautogui.click()
+            break
+        else:
+            pyautogui.scroll(30)
+            time.sleep(2)
+            pyautogui.click(900, 0)
+            findName(name)
+            print("didn't work")
     
 def discord_Main(name):
     open_discord()
@@ -61,9 +85,10 @@ def discord_Main(name):
     goToProgramingClass()
     findName(name)
     time.sleep(2)
-    getDots()
-    time.sleep(2)
-    getBell()
-    
-name = "Jonas"
+    # getDots()
+    # time.sleep(2)
+    getBell(name)
+
+
+name = "Pascal"
 discord_Main(name)

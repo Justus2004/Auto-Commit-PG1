@@ -51,17 +51,33 @@
 import time
 import pyautogui
 
-def check_page_suitability():
-    # chatSymbol_0 = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\chatZeroGit.png')
-    chatSymbol_1 = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\chatOneGit.png')
+# def check_page_suitability():
+#     # chatSymbol_0 = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\chatZeroGit.png')
+#     chatSymbol_1 = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\chatOneGit.png')
     
-    if chatSymbol_1 is not None:
-        print("found one")
+#     if chatSymbol_1 is not None:
+#         print("found one")
         
-    else:
-        print("found nothing")
+#     else:
+#         print("found nothing")
 
 
-time.sleep(3)
-check_page_suitability()
+# time.sleep(3)
+# check_page_suitability()
 
+def getBell():
+    while True: 
+        field = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\emoji_disc.png')
+        
+        if field is not None:
+            pyautogui.moveTo(field)
+            
+            x,y = field
+            pyautogui.moveTo(x-105, y, duration=1)  
+            pyautogui.click()
+            break
+        else:
+            print("didn't work")
+        
+time.sleep(2)
+getBell()
