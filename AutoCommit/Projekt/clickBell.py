@@ -23,21 +23,24 @@ def goToProgramingClass():
     programming = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\programming.png')  
     if programming:
         pyautogui.click(programming)
+        pyautogui.moveTo(1455, 640)
         print("channel found")
     else:
         print("channel not found")
 
 def findName(name):
+    name_lowercase = name.lower()  # Um sicherzustellen, dass der Name in Kleinbuchstaben ist
     while True:
-        name = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\names\Marvin.png')
+        mate = pyautogui.locateCenterOnScreen(f'AutoCommit\\Projekt\\names\\{name_lowercase}.png')
         
-        if name is not None:
-            pyautogui.moveTo(name)
+        if mate is not None:
+            pyautogui.moveTo(mate)
             print("Name found!")
             break  
         else:
             pyautogui.scroll(700)
-            time.sleep(1)  
+            time.sleep(1) 
+ 
 
 def getDots():
     dots = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\dotsDiscord.png')
@@ -57,7 +60,9 @@ def discord_Main(name):
     time.sleep(3)
     goToProgramingClass()
     findName(name)
+    time.sleep(2)
     getDots()
+    time.sleep(2)
     getBell()
     
 name = "Jonas"
