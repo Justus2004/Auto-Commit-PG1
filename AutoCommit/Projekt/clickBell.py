@@ -62,7 +62,7 @@ def getDots():
 
 def getBell(name):
     while True: 
-        field = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\field_discord.png')
+        field = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\twoEmojis.png')
         time.sleep(2)
         
         if field is not None:
@@ -75,7 +75,7 @@ def getBell(name):
         else:
             pyautogui.scroll(30)
             time.sleep(2)
-            pyautogui.click(900, 0)
+            pyautogui.click(900, 5)
             findName(name)
             print("didn't work")
     
@@ -92,3 +92,5 @@ def discord_Main(name):
 
 name = "Pascal"
 discord_Main(name)
+
+# über threads, drei punkte, bell
