@@ -42,6 +42,3 @@ def new_discussion_main(theme):
     new_disc()
     time.sleep(1)
     type_theme(theme)
-
-time.sleep(2)
-new_discussion_main("Tic-Tak-Toe")
