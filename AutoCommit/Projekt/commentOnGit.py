@@ -241,6 +241,8 @@ def write_Git_Comment_Main():
     
     pyautogui.hotkey('ctrl', 'a')
     pyautogui.hotkey('ctrl', 'v')
+    time.sleep(2)
+    
     comment = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\commentGit.png')  
     
     if comment is not None:
@@ -267,9 +269,6 @@ def git_main():
     ask_Chat_Main()
     time.sleep(1)
     write_Git_Comment_Main()
-    time.sleep(1)
+    time.sleep(2)
     closeTheTabs()
     return name  # Den extrahierten Namen zurückgeben
-
-
-git_main()

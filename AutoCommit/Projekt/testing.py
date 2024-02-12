@@ -65,19 +65,36 @@ import pyautogui
 # time.sleep(3)
 # check_page_suitability()
 
-def getBell():
-    while True: 
-        field = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\emoji_disc.png')
+# def getBell():
+#     while True: 
+#         field = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\emoji_disc.png')
         
-        if field is not None:
-            pyautogui.moveTo(field)
+#         if field is not None:
+#             pyautogui.moveTo(field)
             
-            x,y = field
-            pyautogui.moveTo(x-105, y, duration=1)  
-            pyautogui.click()
-            break
-        else:
-            print("didn't work")
+#             x,y = field
+#             pyautogui.moveTo(x-105, y, duration=1)  
+#             pyautogui.click()
+#             break
+#         else:
+#             print("didn't work")
         
-time.sleep(2)
-getBell()
+# time.sleep(2)
+# getBell()
+
+
+def findRightChannel():
+    pyautogui.moveTo(422, 390)
+    time.sleep(2)
+    pyautogui.scroll(700)
+    
+    weeklyCoding = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\weeklyCodingDiscord.png')
+    
+    if weeklyCoding is not None:
+        pyautogui.moveTo(weeklyCoding)
+        pyautogui.click()
+    else:
+        print("didn't work")
+
+time.sleep(2)        
+findRightChannel()
