@@ -128,8 +128,3 @@ def discord_Main(name):
     time.sleep(2)
     getReaction()
 
-
-name = "Jonas"
-discord_Main(name)
-
-# über threads, drei punkte, bell

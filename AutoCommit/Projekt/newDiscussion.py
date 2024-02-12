@@ -12,7 +12,7 @@ def new_disc():
         pyautogui.moveTo(new_disc)
         pyautogui.click()
     else:
-        print("didn't work")
+        print("start new discussion didn't work")
 
 def type_theme(theme):
     
@@ -38,7 +38,10 @@ def type_theme(theme):
 
 def new_discussion_main(theme):
     open_your_git()
-    time.sleep(1)
+    time.sleep(2)
     new_disc()
-    time.sleep(1)
+    time.sleep(2)
     type_theme(theme)
+    time.sleep(2)
+    pyautogui.hotkey('ctrl', 'w')
+

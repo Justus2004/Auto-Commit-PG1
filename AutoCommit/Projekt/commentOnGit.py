@@ -270,6 +270,3 @@ def git_main():
     time.sleep(1)
     closeTheTabs()
     return name  # Den extrahierten Namen zurückgeben
-
-
-git_main()

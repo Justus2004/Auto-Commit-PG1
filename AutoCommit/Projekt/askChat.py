@@ -30,6 +30,15 @@ def ask_chat_gpt(ideas):
         
     
 def clickOnCopy():
+    # time.sleep(20)
+    # click_at_position(720, 843)
+    # time.sleep(2)
+    
     time.sleep(20)
-    click_at_position(720, 843)
-    time.sleep(2)
+    copy = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\copyButton.png')
+    
+    if copy is not None:
+        pyautogui.moveTo(copy)
+        pyautogui.click()
+    else:
+        print("was unable to copy the output")

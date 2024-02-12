@@ -30,7 +30,6 @@ if __name__ == "__main__":
     extract_code_from_clipboard(name)
     time.sleep(2)
     create_and_push_commit_file(name, "new Programm")
-    open_browser(GitHub_url)
     
     # write new discussion
     time.sleep(2)
@@ -40,3 +39,6 @@ if __name__ == "__main__":
     time.sleep(2)
     name = git_main()  # Name von git_main erhalten
     discord_Main(name)  # Name an discord_Main übergeben
+    
+    # to see the commits
+    open_browser(GitHub_url)
