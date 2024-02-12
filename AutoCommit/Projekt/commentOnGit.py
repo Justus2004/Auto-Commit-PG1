@@ -243,6 +243,8 @@ def write_Git_Comment_Main():
     pyautogui.hotkey('ctrl', 'v')
     time.sleep(2)
     
+    pyautogui.scroll(-200)
+    
     comment = pyautogui.locateCenterOnScreen(r'AutoCommit\Projekt\buttons\commentGit.png')  
     
     if comment is not None:
