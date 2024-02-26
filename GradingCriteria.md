@@ -44,8 +44,8 @@ Importierte Packete aus libary wurde auch angewandt
 
 # Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
 <!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
-???
-
+https://github.com/Justus2004/Auto-Commit-PG1/commits?author=Justus2004&since=2024-01-31&until=2024-02-26
+![alt text](image.png)
 
 
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
@@ -64,11 +64,15 @@ Dictionaries ist in dem Code https://github.com/Justus2004/Auto-Commit-PG1/blob/
 <!-- Beweise anbringen für Nutzen folgender Tools (können links, screenshots und screnncasts sein) -->
 <!-- GIT -->
 Siehe Commits
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 Wir haben Git mit unserem VSC verbunden um das Uploaden unserer Dateien zu vereinfachen 
 <!-- VSC -->
+![alt text](image-3.png)
 Unser ganzes Projekt wurde mit VSC geschrieben 
-
 <!-- ChatGPT -->
+![alt text](image-4.png)
 Unser Projekt besteht daraus ChatGPT Dinge zu Fragen und dessen Antwort zu kopieren 
 
 
