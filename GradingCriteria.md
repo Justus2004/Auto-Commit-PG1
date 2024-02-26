@@ -45,7 +45,7 @@ Importierte Packete aus libary wurde auch angewandt
 # Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
 <!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
 https://github.com/Justus2004/Auto-Commit-PG1/commits?author=Justus2004&since=2024-01-31&until=2024-02-26
-![alt text](image.png)
+Siehe PDF Datei Commits Justus 
 
 
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
